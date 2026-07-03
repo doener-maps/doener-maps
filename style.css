@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
 
+/* =========================
+   BASE
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +21,17 @@ body {
     margin: 0 auto;
 }
 
-/* HERO */
+/* =========================
+   TYPO HELPERS
+========================= */
+
+h1, h2, h3, h4 {
+    font-family: 'Baloo 2', cursive;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     padding: 35px 0 80px;
@@ -67,7 +81,6 @@ body {
 }
 
 .hero-left h1 {
-    font-family: 'Baloo 2', cursive;
     font-size: clamp(3rem, 6vw, 5rem);
     line-height: 0.95;
     font-weight: 800;
@@ -93,7 +106,9 @@ body {
     box-shadow: 0 12px 35px rgba(255, 24, 13, .25);
 }
 
-/* PHONE */
+/* =========================
+   PHONE MOCKUP
+========================= */
 
 .phone {
     width: 285px;
@@ -129,7 +144,6 @@ body {
 }
 
 .phone h3 {
-    font-family: 'Baloo 2', cursive;
     font-size: 1.8rem;
     margin-bottom: 14px;
 }
@@ -137,11 +151,7 @@ body {
 .profile-card {
     height: 260px;
     border-radius: 26px;
-    background: linear-gradient(
-        to bottom,
-        #e6e0dd,
-        #5f473f
-    );
+    background: linear-gradient(to bottom, #e6e0dd, #5f473f);
     position: relative;
     overflow: hidden;
 }
@@ -165,7 +175,6 @@ body {
 }
 
 .profile-content h4 {
-    font-family: 'Baloo 2', cursive;
     font-size: 1.8rem;
     margin-bottom: 5px;
 }
@@ -203,7 +212,9 @@ body {
     font-size: 1.4rem;
 }
 
-/* FEATURES */
+/* =========================
+   FEATURES
+========================= */
 
 .features {
     padding: 40px 0 80px;
@@ -211,7 +222,6 @@ body {
 
 .features h2 {
     text-align: center;
-    font-family: 'Baloo 2', cursive;
     font-size: 3rem;
     margin-bottom: 35px;
 }
@@ -239,7 +249,6 @@ body {
 
 .feature-card h3 {
     margin: 16px 0 10px;
-    font-family: 'Baloo 2', cursive;
     font-size: 1.8rem;
 }
 
@@ -247,26 +256,6 @@ body {
     color: #6e5d56;
     line-height: 1.7;
 }
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-left p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 /* =========================
    WAITLIST PAGE
@@ -285,7 +274,6 @@ body {
 }
 
 .waitlist-content h1 {
-    font-family: 'Baloo 2', cursive;
     font-size: clamp(3rem, 5vw, 5.2rem);
     line-height: 0.95;
     font-weight: 800;
@@ -323,7 +311,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
 }
 
 /* FORM */
@@ -336,7 +323,6 @@ body {
 }
 
 .form-card h2 {
-    font-family: 'Baloo 2', cursive;
     font-size: 3.2rem;
     margin-bottom: 20px;
 }
@@ -350,7 +336,6 @@ body {
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 1.2rem;
-    color: #2b120e;
 }
 
 .field input,
@@ -361,13 +346,7 @@ body {
     padding: 20px 22px;
     background: #faf7f5;
     font-size: 1.1rem;
-    outline: none;
     color: #2b120e;
-}
-
-.field input::placeholder,
-.field textarea::placeholder {
-    color: #b1a49e;
 }
 
 .field textarea {
@@ -381,50 +360,24 @@ body {
     cursor: pointer;
     border-radius: 999px;
     padding: 24px;
-    margin-top: 10px;
-
     background: #f11208;
     color: white;
-
     font-size: 1.5rem;
     font-weight: 700;
-
-    transition: .2s;
 }
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-}
-
-.note {
-    margin-top: 24px;
-    color: #f11208;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-@media (max-width: 1100px) {
-
-    .waitlist-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .form-card {
-        width: 100%;
-    }
-}
-
 
 /* =========================
-   SUCCESS PAGE
+   SUCCESS PAGE (FIXED)
 ========================= */
 
 .success-page {
     min-height: 100vh;
-    padding: 90px 20px;
+    padding: 80px 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .success-card {
@@ -433,144 +386,85 @@ body {
 
     background: white;
     border-radius: 42px;
-
     padding: 55px 45px;
 
     text-align: center;
 
     border: 1px solid #ece7e4;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.06);
 }
 
 .success-icon {
     width: 100px;
     height: 100px;
-
     margin: 0 auto 35px;
-
     background: #ef1208;
     color: white;
-
     border-radius: 28px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 3rem;
-
-    box-shadow: 0 15px 30px rgba(239, 18, 8, 0.15);
+    box-shadow: 0 18px 40px rgba(239, 18, 8, 0.18);
 }
 
 .success-card h1 {
-    font-family: 'Baloo 2', cursive;
     font-size: clamp(3rem, 5vw, 5rem);
     line-height: 0.9;
-    font-weight: 800;
-
-    color: #2b120e;
-
     margin-bottom: 30px;
 }
 
 .success-text {
-    max-width: 720px;
+    max-width: 650px;
     margin: 0 auto 35px;
-
     font-size: 1.15rem;
     line-height: 1.8;
-
     color: #6e5d56;
 }
 
 .steps-box {
-    max-width: 720px;
-
+    max-width: 650px;
     margin: 0 auto 35px;
-
     background: #fff1ec;
-
     border: 1px solid #f6d8cf;
-
     border-radius: 28px;
-
     padding: 28px;
-
     text-align: left;
-}
-
-.steps-box div {
-    font-size: 1.15rem;
-    font-weight: 700;
-
-    color: #5a332b;
-
-    line-height: 1.8;
-}
-
-.steps-box div:not(:last-child) {
-    margin-bottom: 8px;
 }
 
 .back-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-width: 260px;
     height: 64px;
-
-    padding: 0 36px;
-
     background: #ef1208;
     color: white;
-
     text-decoration: none;
-
     border-radius: 999px;
-
     font-weight: 700;
-    font-size: 1.15rem;
-
-    transition: transform .2s;
-}
-
-.back-btn:hover {
-    transform: translateY(-2px);
 }
 
 .spam-note {
     margin-top: 32px;
-
     color: #8b7068;
-
-    font-size: 1rem;
-    font-weight: 500;
-
     text-align: center;
 }
 
-@media (max-width: 768px) {
+/* =========================
+   RESPONSIVE
+========================= */
 
-    .success-card {
-        padding: 40px 24px;
+@media (max-width: 1100px) {
+    .waitlist-layout {
+        grid-template-columns: 1fr;
     }
 
-    .success-icon {
-        width: 84px;
-        height: 84px;
-        font-size: 2.5rem;
+    .hero-content {
+        flex-direction: column;
     }
 
-    .steps-box {
-        padding: 22px;
-    }
-
-    .steps-box div {
-        font-size: 1rem;
-    }
-
-    .back-btn {
-        width: 100%;
-        min-width: auto;
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 }
