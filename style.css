@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5efeb;
+    color: #2b120e;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+/* HERO */
+
+.hero {
+    padding: 35px 0 80px;
+}
+
+.navbar {
+    margin-bottom: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    background: #ff1c0d;
+    color: white;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-left {
+    max-width: 620px;
+}
+
+.badge {
+    display: inline-block;
+    background: white;
+    border-radius: 999px;
+    padding: 10px 16px;
+    margin-bottom: 24px;
+    font-size: .9rem;
+}
+
+.hero-left h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 0.95;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.hero-left p {
+    max-width: 540px;
+    line-height: 1.8;
+    color: #6e5d56;
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #ff180d;
+    color: white;
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: 0 12px 35px rgba(255, 24, 13, .25);
+}
+
+/* PHONE */
+
+.phone {
+    width: 285px;
+    background: white;
+    border-radius: 35px;
+    padding: 16px;
+    box-shadow: 0 30px 60px rgba(0,0,0,.08);
+}
+
+.phone-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tabs span {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #efe7e3;
+    font-size: .75rem;
+}
+
+.tabs .active {
+    background: #ff180d;
+    color: white;
+}
+
+.phone h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+}
+
+.profile-card {
+    height: 260px;
+    border-radius: 26px;
+    background: linear-gradient(
+        to bottom,
+        #e6e0dd,
+        #5f473f
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.distance {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(255,255,255,.25);
+    color: white;
+    font-size: .75rem;
+    padding: 8px 12px;
+    border-radius: 999px;
+}
+
+.profile-content {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    color: white;
+}
+
+.profile-content h4 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.profile-content p {
+    font-size: .9rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+.actions button {
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.reject {
+    width: 46px;
+    height: 46px;
+    background: #f5f5f5;
+    color: #ff180d;
+    font-size: 1.4rem;
+}
+
+.like {
+    width: 54px;
+    height: 54px;
+    background: #ff180d;
+    color: white;
+    font-size: 1.4rem;
+}
+
+/* FEATURES */
+
+.features {
+    padding: 40px 0 80px;
+}
+
+.features h2 {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size: 3rem;
+    margin-bottom: 35px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: white;
+    padding: 28px;
+    border-radius: 24px;
+    border: 1px solid #f0e6e2;
+}
+
+.feature-card.highlighted {
+    background: #fff4f1;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.feature-card h3 {
+    margin: 16px 0 10px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.8rem;
+}
+
+.feature-card p {
+    color: #6e5d56;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
